@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemini Proxy - {{ url }}</title>
+    <style>
+        body { max-width: 800px; margin: 0 auto; padding: 20px; font-family: sans-serif; }
+        .content { line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/">← Back to search</a>
+        <h2>Viewing: {{ url }}</h2>
+    </div>
+    <div class="content">
+        {{ content|safe }}
+    </div>
+</body>
+</html>

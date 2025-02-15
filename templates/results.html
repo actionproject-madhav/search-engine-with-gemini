@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body { max-width: 800px; margin: 0 auto; padding: 20px; font-family: sans-serif; }
+        .result { margin: 30px 0; padding: 20px; border: 1px solid #eee; border-radius: 5px; }
+        .result h3 { margin: 0 0 10px 0; color: #0066cc; }
+        .result a { color: #0066cc; text-decoration: none; }
+        .result a:hover { text-decoration: underline; }
+        .content { margin-top: 10px; color: #444; line-height: 1.5; }
+        .content h1, .content h2, .content h3 { color: #333; }
+        .content a { color: #0066cc; text-decoration: none; }
+        .content a:hover { text-decoration: underline; }
+        .pagination { margin: 20px 0; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Search Results for "{{ query }}"</h1>
+    
+    {% if results %}
+        <div class="result-count">{{ results|length }} results found</div>
+        
+        {% for result in results %}
+            <div class="result">
+                <h3>{{ result.title }}</h3>
+                <a href="/proxy?url={{ result.url|urlencode }}">{{ result.url }}</a>
+                <div class="content">
+                    {{ result.content|safe }}
+                </div>
+            </div>
+        {% endfor %}
+        
+        <div class="pagination">
+            <!-- Add pagination links if needed -->
+        </div>
+    {% else %}
+        <div class="no-results">No results found for "{{ query }}"</div>
+    {% endif %}
+    
+    <div class="back-to-search">
+        <a href="/">← Back to search</a>
+    </div>
+</body>
+</html>

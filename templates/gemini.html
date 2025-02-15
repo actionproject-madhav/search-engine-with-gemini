@@ -1,0 +1,24 @@
+<!-- templates/gemini.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ url }}</title>
+    <style>
+        body { max-width: 800px; margin: 0 auto; padding: 20px; }
+        pre { background: #f0f0f0; padding: 1em; overflow-x: auto; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1 { font-size: 1.8em; border-bottom: 1px solid #ccc; }
+        h2 { font-size: 1.5em; }
+        h3 { font-size: 1.3em; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">← Back to Search</a>
+    </nav>
+    <article>
+        {{ content|safe }}
+    </article>
+</body>
+</html>
