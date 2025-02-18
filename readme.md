@@ -1,8 +1,7 @@
 # Gemini Search Engine 🔍
 
-[![CI/CD](https://github.com/actionproject-madhav/gemini-search-engine/actions/workflows/python-app.yml/badge.svg)](https://github.com/actionproject-madhav/gemini-search-engine/actions)
 
-A privacy-focused search engine for the Gemini protocol.
+A privacy-focused search engine for the Gemini protocol built from scratch with multithreaded crawling, indexing and search ranking
 
 ## Features
 - Gemini protocol crawler
